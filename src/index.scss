@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+
+$white:     #ffffff;
+$sky:       #b8defa;
+$crust:     #e6be99;
+$gray:      #808080;
+$yolk:      #F0993C;
+$cheese:    #ffeb99;
+$pepperoni: #c62828;
+$specks:    #b71c1c;
+
+body {
+  margin: 3vw 15vw 1vw 15vw;
+  padding: 0;
+  font-family: 'Fredoka One', cursive;
+  background-color: $sky;
+  color: $white;
+  font-size: 2.2vw;
+  letter-spacing: 1px;
+}
+
+.navbar {
+  background-color: $white;
+  border-radius: 0.6vw; 
+  color: $sky;
+  margin-bottom: 30px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding: 1vh 0 1vh 2vw;
+}
+
+nav button {
+  margin-right: 2vw;
+  font-size: 2.5vw;
+}
+
+nav button:hover {
+  color: $cheese;
+}
+
+#user {
+  margin-left: 55%;
+  color: $cheese;
+  margin-right: 0;
+}
+
+.btn, input {
+  background-color: $white;
+  color: $sky;
+  font-size: 2.2vw;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Fredoka One', cursive;
+}
+
+.add {
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.forms {
+  margin: 7vw 35%;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  font-size: 25px;
+  color: $sky;
+  line-height: 1.5;
+	padding: 4px 10px;
+  margin-bottom: 14px;
+  font-family: 'Fredoka One', cursive;
+}
+
+input[type="checkbox"] {
+  transform: scale(2);
+  margin-left: 50%;
+}
+
+input[type="checkbox"]:checked + label {
+  color: $sky;
+}
+
+::placeholder {
+  color: $sky;
+}
+
+th {
+  color: darken($crust, 10%);
+}
+
+th, td {
+  padding: 2vw;
+}
+
+#pagination {
+  text-align: center;
+  margin-top: 8vw;
+  margin-bottom: -5vw;
+}
+
+#pagination button {
+  background-color: $sky;
+  color: $white;
+  margin: 0.5vw;
+  font-size: 1.5vw;
+}
+
+#username {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#page-inp {
+  width: 75px;
+  text-align: center;
+  border: none;
+  font-size: 18px;
+}
+
+.text-color-error-header{
+  color: $specks;
+  font-weight: 600;
+}
+.text-color-error{
+  color: $pepperoni;
+}
+
+.text-color-corect-header{
+  color: $yolk;
+  font-weight: 600;
+}
+.text-color-corect{
+  color:$gray;
+}
+
+.mod {
+  position: absolute;
+  bottom: 90%;
+  left: 30%;
+  border: none;
+  background-color: $crust;
+  padding: 2vw;
+  border-radius: 1vw;
+}
