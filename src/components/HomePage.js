@@ -4,6 +4,7 @@ import getTasks from '../methods/getTasks';
 import saveChanges from '../methods/saveChanges';
 import changePages from '../methods/changePages';
 import Task from './Task';
+import Pagination from './Pagination';
 
 const mapStateToProps = (store) => {
   return {
@@ -43,62 +44,10 @@ class HomePage extends React.Component {
   componentDidMount() {
     this.getTasks();
   }
-  
-  onChangeCountPage = (e) => {
-    this.setState({ 
-      curent_page: e.target.value 
-    })
-  }
-
-  onFocusOutCountPage = (e) => {
-    this.props.changePage({
-      page: e.target.value,
-      sort_direction: this.props.sort_direction,
-      sort_field: this.props.sort_field
-    });
-  }
 
   getTasks = () => {
     this.props.onFetch({
       page: this.props.page,
-      sort_direction: this.props.sort_direction,
-      sort_field: this.props.sort_field
-    });
-  }
-
-  onInPage = () => {
-    this.props.changePage({
-      page: Number(this.props.page) + 1,
-      sort_direction: this.props.sort_direction,
-      sort_field: this.props.sort_field
-    });
-  }
-
-  onDecPage = () => {
-    if (this.props.page === 1) {
-      return;
-    }
-    this.props.changePage({
-      page: Number(this.props.page) - 1,
-      sort_direction: this.props.sort_direction,
-      sort_field: this.props.sort_field
-    });
-    }
-
-  onForvard = () => {
-    this.props.changePage({
-      page: Math.ceil(this.props.total_task_count / 3),
-      sort_direction: this.props.sort_direction,
-      sort_field: this.props.sort_field
-    });
-  }
-
-  onBack = () => {
-    if (this.props.page === 1) {
-      return;
-    }
-    this.props.changePage({
-      page: 1,
       sort_direction: this.props.sort_direction,
       sort_field: this.props.sort_field
     });
@@ -157,29 +106,7 @@ class HomePage extends React.Component {
               </tbody>
             </table>
           </div>
-
-          <div id="pagination">
-            <button onClick={this.onBack} className="btn" type="button">
-              start
-            </button>
-            <button onClick={this.onDecPage} className="btn" type="button">
-              -
-            </button>
-            <input 
-              type="text"
-              id="page-inp"
-              value={this.state.curent_page}
-              onBlur={this.onFocusOutCountPage}
-              onChange={this.onChangeCountPage}
-              placeholder="type №"
-            />
-            <button onClick={this.onInPage} className="btn" type="button">
-              +
-            </button>
-            <button onClick={this.onForvard} className="btn" type="button">
-              end
-            </button>
-          </div>
+          <Pagination />
         </div>
       );
     }
