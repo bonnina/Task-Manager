@@ -24,6 +24,7 @@ body {
   border-radius: 0.6vw; 
   color: $sky;
   margin-bottom: 30px;
+  margin-left: 1%;
 }
 
 nav {
@@ -97,10 +98,36 @@ th, td {
   padding: 2vw;
 }
 
+td {
+  max-width: 10vw;
+  overflow: hidden;
+}
+
+.taskText {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+  background-color: $sky;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.1);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.01);
+  background-color: $sky;
+  margin-left: 2vw;
+}
+
 #pagination {
-  text-align: center;
-  margin-top: 8vw;
-  margin-bottom: -5vw;
+  position: absolute;
+  bottom: 30px;
+  left: 40%;
 }
 
 #pagination button {
