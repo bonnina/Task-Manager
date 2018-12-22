@@ -6,9 +6,9 @@ class Task extends React.Component {
   render() {
     return (
       <tr>
-          <td>{this.props.task.username}</td>
+          <td className='taskText'>{this.props.task.username}</td>
           <td>{this.props.task.email}</td>
-          <td>{this.props.task.text}</td>
+          <td className='taskText'>{this.props.task.text}</td>
           <td>
             <Admin buttonLabel={"edit"}
               task={this.props.task.text}
