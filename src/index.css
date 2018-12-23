@@ -30,29 +30,30 @@ nav {
   padding: 1vh 0 1vh 2vw;
 }
 
-nav button {
-  margin-right: 2vw;
-  font-size: 2.5vw;
-}
-
 nav button:hover {
-  color: #ffeb99;
+  color: #ebcbad;
 }
 
 #user {
-  margin-left: 55%;
-  color: #ffeb99;
+  margin-left: 52%;
+  color: #ebcbad;
   margin-right: 0;
+  font-size: 2.4vw;
 }
 
 .btn, input {
   background-color: #ffffff;
   color: #b8defa;
-  font-size: 2.2vw;
+  font-size: 1.8vw;
   border-radius: 4px;
   border: none;
   cursor: pointer;
   font-family: 'Fredoka One', cursive;
+}
+
+nav .btn {
+  margin-right: 2vw;
+  font-size: 2.4vw;
 }
 
 .add {
@@ -76,7 +77,6 @@ input[type="text"], input[type="password"], input[type="email"] {
 input[type="checkbox"] {
   -webkit-transform: scale(2);
           transform: scale(2);
-  margin-left: 50%;
 }
 
 input[type="checkbox"]:checked + label {
@@ -100,7 +100,7 @@ input[type="checkbox"]:checked + label {
 }
 
 th {
-  color: #dca470;
+  color: #e6be99;
 }
 
 th, td {
@@ -108,10 +108,10 @@ th, td {
 }
 
 td {
-  min-width: 10vw;
-  max-width: 11vw;
+  min-width: 10.5vw;
+  max-width: 10.5vw;
   overflow: hidden;
-  font-size: 2vw;
+  font-size: 1.7vw;
 }
 
 .taskText {
@@ -205,7 +205,7 @@ td {
 
 .mod {
   position: absolute;
-  bottom: 90%;
+  bottom: 50%;
   left: 30%;
   border: none;
   background-color: #e6be99;
