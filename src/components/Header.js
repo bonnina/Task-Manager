@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 import { userLogOut } from '../actions/index';
 import Username from './Username';
 
-const mapStateToProps = (store, ownProps) => {
+const mapStateToProps = (store) => {
   return {
     user_name: store.auth.userName,
     is_admin: store.auth.admin,
@@ -54,6 +55,13 @@ class Header extends React.Component {
       </div>
     );
   }
+}
+
+Header.propTypes = {
+  user_name: PropTypes.string,
+  is_admin: PropTypes.bool,
+  is_loading: PropTypes.bool,
+  onLogOut: PropTypes.func
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -1,15 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Admin from './Admin';
 
 class Task extends React.Component {
-
   render() {
     return (
       <tr>
-          <td>{this.props.task.username}</td>
+          <td className='taskText'>{this.props.task.username}</td>
           <td>{this.props.task.email}</td>
-          <td>{this.props.task.text}</td>
-          <td>
+          <td className='taskText task'>{this.props.task.text}</td>
+          <td className='center'>
             <Admin buttonLabel={"edit"}
               task={this.props.task.text}
               id={this.props.task.id}
@@ -18,7 +18,7 @@ class Task extends React.Component {
               admin={this.props.admin}
             />
           </td>
-          <td>
+          <td className="center">
             <div>
               <input 
                 disabled="1" 
@@ -36,6 +36,12 @@ class Task extends React.Component {
         </tr>
       );
     }
+}
+
+Task.propTypes = {
+  task: PropTypes.object,
+  onFetch: PropTypes.func,
+  admin: PropTypes.bool
 }
 
 export default Task;

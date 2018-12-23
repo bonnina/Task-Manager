@@ -14,6 +14,7 @@ body {
   border-radius: 0.6vw;
   color: #b8defa;
   margin-bottom: 30px;
+  margin-left: 2%;
 }
 
 nav {
@@ -29,29 +30,30 @@ nav {
   padding: 1vh 0 1vh 2vw;
 }
 
-nav button {
-  margin-right: 2vw;
-  font-size: 2.5vw;
-}
-
 nav button:hover {
-  color: #ffeb99;
+  color: #ebcbad;
 }
 
 #user {
-  margin-left: 55%;
-  color: #ffeb99;
+  margin-left: 52%;
+  color: #ebcbad;
   margin-right: 0;
+  font-size: 2.4vw;
 }
 
 .btn, input {
   background-color: #ffffff;
   color: #b8defa;
-  font-size: 2.2vw;
+  font-size: 1.8vw;
   border-radius: 4px;
   border: none;
   cursor: pointer;
   font-family: 'Fredoka One', cursive;
+}
+
+nav .btn {
+  margin-right: 2vw;
+  font-size: 2.4vw;
 }
 
 .add {
@@ -75,7 +77,6 @@ input[type="text"], input[type="password"], input[type="email"] {
 input[type="checkbox"] {
   -webkit-transform: scale(2);
           transform: scale(2);
-  margin-left: 50%;
 }
 
 input[type="checkbox"]:checked + label {
@@ -99,17 +100,58 @@ input[type="checkbox"]:checked + label {
 }
 
 th {
-  color: #dca470;
+  color: #e6be99;
 }
 
 th, td {
   padding: 2vw;
 }
 
-#pagination {
+td {
+  min-width: 10.5vw;
+  max-width: 10.5vw;
+  overflow: hidden;
+  font-size: 1.7vw;
+}
+
+.taskText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-x: scroll;
+}
+
+.center {
   text-align: center;
-  margin-top: 8vw;
-  margin-bottom: -5vw;
+  max-width: 7vw;
+}
+
+.task {
+  margin-left: 20%;
+}
+
+::-webkit-scrollbar {
+  background-color: #b8defa;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.01);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.01);
+  background-color: #b8defa;
+  margin-left: 2vw;
+}
+
+#pagination {
+  position: absolute;
+  bottom: 30px;
+  left: 40%;
 }
 
 #pagination button {
@@ -144,7 +186,7 @@ th, td {
 
 .text-color-error-header {
   color: #b71c1c;
-  font-weight: 600;
+  font-size: 1.5vw;
 }
 
 .text-color-error {
@@ -153,16 +195,17 @@ th, td {
 
 .text-color-corect-header {
   color: #F0993C;
-  font-weight: 600;
+  font-size: 1.5vw;
 }
 
 .text-color-corect {
   color: #808080;
+  font-size: 1.5vw;
 }
 
 .mod {
   position: absolute;
-  bottom: 90%;
+  bottom: 50%;
   left: 30%;
   border: none;
   background-color: #e6be99;
