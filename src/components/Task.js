@@ -2,7 +2,6 @@ import React from 'react';
 import Admin from './Admin';
 
 class Task extends React.Component {
-
   render() {
     return (
       <tr>
@@ -18,13 +17,13 @@ class Task extends React.Component {
               admin={this.props.admin}
             />
           </td>
-          <td>
+          <td className="center">
             <div>
               <input 
                 disabled="1" 
                 type="checkbox" 
                 checked={this.props.task.status === 10} 
-                className="custom-control-input center" 
+                className="custom-control-input" 
                 id={"customCheck_" + this.props.task.id} 
               />
               <label 

@@ -5,7 +5,7 @@ import { Redirect } from 'react-router';
 import { userLogIn } from '../actions/index';
 import sanitize from '../methods/sanitize';
 
-const mapStateToProps = (store, ownProps) => {
+const mapStateToProps = (store) => {
   return {
     log_in: store.auth.admin
   }

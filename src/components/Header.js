@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { userLogOut } from '../actions/index';
 import Username from './Username';
 
-const mapStateToProps = (store, ownProps) => {
+const mapStateToProps = (store) => {
   return {
     user_name: store.auth.userName,
     is_admin: store.auth.admin,

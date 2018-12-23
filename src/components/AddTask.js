@@ -4,7 +4,7 @@ import { Button } from 'reactstrap';
 import sanitize from '../methods/sanitize';
 import saveTask from '../methods/saveTask'
 
-const mapStateToProps = (store, ownProps) => {
+const mapStateToProps = (store) => {
   return {
     isLoading: store.load,
     err_status: store.home.err_status,
