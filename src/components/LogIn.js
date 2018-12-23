@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Redirect } from 'react-router';
@@ -106,6 +107,11 @@ class LogIn extends React.Component {
       </div>
     );
   }
+}
+
+LogIn.propTypes = {
+  log_in: PropTypes.bool,
+  userLogin: PropTypes.func
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(LogIn);

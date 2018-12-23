@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Username extends React.Component {
   render() {
@@ -8,6 +9,10 @@ class Username extends React.Component {
       </span>
     )
   }
+}
+
+Username.propTypes = {
+  user_name: PropTypes.string,
 }
 
 export default Username;

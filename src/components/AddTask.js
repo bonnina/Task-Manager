@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Button } from 'reactstrap';
 import sanitize from '../methods/sanitize';
@@ -133,6 +134,15 @@ class AddTask extends React.Component {
         </div>
       )
     }
+}
+
+AddTask.propTypes = {
+  isLoading: PropTypes.bool,
+  err_status: PropTypes.number,
+  err_string: PropTypes.string,
+  sin_err_status: PropTypes.number,
+  sin_err_string: PropTypes.string,
+  onFetch: PropTypes.func
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddTask);

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Button, FormGroup, Input, Label, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 class Admin extends React.Component {
@@ -83,6 +84,15 @@ class Admin extends React.Component {
         </div>
       );
     }
+}
+
+Admin.propTypes = {
+  buttonLabel: PropTypes.string,
+  task: PropTypes.string,
+  id: PropTypes.number,
+  status: PropTypes.number,
+  onFetch: PropTypes.func,
+  admin: PropTypes.bool
 }
 
 export default Admin;

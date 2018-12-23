@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import changePages from '../methods/changePages';
 
@@ -105,6 +106,15 @@ class Pagination extends React.Component {
       </div>
     );
   }
+}
+
+Pagination.propTypes = {
+  page: PropTypes.number,
+  total_task_count: PropTypes.number,
+  curent_page: PropTypes.number,
+  sort_direction:  PropTypes.string,
+  sort_field: PropTypes.string,
+  changePage: PropTypes.func
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Pagination);

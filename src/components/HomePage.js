@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 import getTasks from '../methods/getTasks';
 import saveChanges from '../methods/saveChanges';
@@ -110,6 +111,19 @@ class HomePage extends React.Component {
         </div>
       );
     }
+}
+
+HomePage.propTypes = {
+  admin: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  page: PropTypes.number,
+  tasks: PropTypes.arrayOf(PropTypes.object),
+  total_task_count: PropTypes.number,
+  curent_page: PropTypes.number,
+  sort_direction:  PropTypes.string,
+  sort_field: PropTypes.string,
+  onFetch: PropTypes.func,
+  changePage: PropTypes.func
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

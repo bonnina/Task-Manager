@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Admin from './Admin';
 
 class Task extends React.Component {
@@ -35,6 +36,12 @@ class Task extends React.Component {
         </tr>
       );
     }
+}
+
+Task.propTypes = {
+  task: PropTypes.object,
+  onFetch: PropTypes.func,
+  admin: PropTypes.bool
 }
 
 export default Task;
