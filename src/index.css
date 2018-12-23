@@ -14,7 +14,7 @@ body {
   border-radius: 0.6vw;
   color: #b8defa;
   margin-bottom: 30px;
-  margin-left: 1%;
+  margin-left: 2%;
 }
 
 nav {
@@ -108,8 +108,10 @@ th, td {
 }
 
 td {
-  max-width: 10vw;
+  min-width: 10vw;
+  max-width: 11vw;
   overflow: hidden;
+  font-size: 2vw;
 }
 
 .taskText {
@@ -119,6 +121,15 @@ td {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow-x: scroll;
+}
+
+.center {
+  text-align: center;
+  max-width: 7vw;
+}
+
+.task {
+  margin-left: 20%;
 }
 
 ::-webkit-scrollbar {
@@ -175,7 +186,7 @@ td {
 
 .text-color-error-header {
   color: #b71c1c;
-  font-weight: 600;
+  font-size: 1.5vw;
 }
 
 .text-color-error {
@@ -184,11 +195,12 @@ td {
 
 .text-color-corect-header {
   color: #F0993C;
-  font-weight: 600;
+  font-size: 1.5vw;
 }
 
 .text-color-corect {
   color: #808080;
+  font-size: 1.5vw;
 }
 
 .mod {
