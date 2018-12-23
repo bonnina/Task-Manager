@@ -8,8 +8,8 @@ class Task extends React.Component {
       <tr>
           <td className='taskText'>{this.props.task.username}</td>
           <td>{this.props.task.email}</td>
-          <td className='taskText'>{this.props.task.text}</td>
-          <td>
+          <td className='taskText task'>{this.props.task.text}</td>
+          <td className='center'>
             <Admin buttonLabel={"edit"}
               task={this.props.task.text}
               id={this.props.task.id}
@@ -24,7 +24,7 @@ class Task extends React.Component {
                 disabled="1" 
                 type="checkbox" 
                 checked={this.props.task.status === 10} 
-                className="custom-control-input" 
+                className="custom-control-input center" 
                 id={"customCheck_" + this.props.task.id} 
               />
               <label 
